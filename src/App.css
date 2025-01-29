@@ -1,0 +1,150 @@
+/* General body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f0f4f8;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+/* Main app container */
+.App {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+/* Heading style */
+h1 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+/* Form style */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  animation: slideIn 1s ease-out;
+}
+
+/* Label styles */
+label {
+  font-size: 1.1rem;
+  color: #333;
+  text-align: left;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* Input fields */
+input {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Button styles */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background-color: #45a049;
+  transform: translateY(-2px);
+}
+
+button:active {
+  background-color: #388e3c;
+  transform: translateY(2px);
+}
+
+button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 128, 0, 0.8);
+}
+
+/* Focus effect on input */
+input:focus {
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.7);
+}
+
+/* Hover effect on labels */
+label:hover {
+  color: #4CAF50;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 480px) {
+  .App {
+    padding: 20px;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+}
